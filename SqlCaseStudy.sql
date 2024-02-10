@@ -48,13 +48,13 @@ on t.IDModel = m.IDModel
 join DIM_MANUFACTURER mm
 on m.IDManufacturer = mm.IDManufacturer
 where mm.IDManufacturer in (
-							select top 5 mm.IDManufacturer from FACT_TRANSACTIONS t
-							join DIM_MODEL m 
-							on t.IDModel = m.IDModel
-							join DIM_MANUFACTURER mm 
-							on m.IDManufacturer = mm.IDManufacturer
-							group by mm.IDManufacturer
-							order by sum(Quantity) desc
+				select top 5 mm.IDManufacturer from FACT_TRANSACTIONS t
+				join DIM_MODEL m 
+				on t.IDModel = m.IDModel
+				join DIM_MANUFACTURER mm 
+				on m.IDManufacturer = mm.IDManufacturer
+				group by mm.IDManufacturer
+				order by sum(Quantity) desc
 						)
 group by Manufacturer_Name, t.IDModel, Model_Name
 order by avg(totalprice)
@@ -121,12 +121,12 @@ where ranking = 2
 	join DIM_MANUFACTURER mm
 	on m.IDManufacturer = mm.IDManufacturer
 	where Manufacturer_Name not in (
-										select distinct Manufacturer_Name from FACT_TRANSACTIONS t
-										join DIM_MODEL m 
-										on t.IDModel = m.idmodel
-										join DIM_MANUFACTURER mm
-										on m.IDManufacturer = mm.IDManufacturer
-										where YEAR(date) = '2009'
+					select distinct Manufacturer_Name from FACT_TRANSACTIONS t
+					join DIM_MODEL m 
+					on t.IDModel = m.idmodel
+					join DIM_MANUFACTURER mm
+					on m.IDManufacturer = mm.IDManufacturer
+					where YEAR(date) = '2009'
 									)
 	and YEAR(date) = '2010'
 
