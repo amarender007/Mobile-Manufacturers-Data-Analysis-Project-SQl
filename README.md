@@ -1,4 +1,4 @@
-# SQL-Case-Study
+# Mobile Manufacturers Data Analysis Project SQL
 Mobile Manufacturers Data Analysis Project
 Overview
 Welcome to the Mobile Manufacturers Data Analysis project! This project focuses on analyzing data related to mobile manufacturers using SQL. The main skills utilized in this project include joins, subqueries, and window functions. The goal is to gain valuable insights into the performance and trends of different mobile manufacturers.
