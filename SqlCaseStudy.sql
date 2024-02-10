@@ -1,4 +1,4 @@
---SQL Advance Case Study
+--SQL Advance Case Study(Data Source sqlCaseStudy.xls)
 
 
 -- List all the states in which we have customers who have bought cellphones from 2005 till today. 
